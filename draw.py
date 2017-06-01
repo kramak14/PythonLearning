@@ -2,11 +2,11 @@ import turtle
 
 def drawsquare():
     window = turtle.Screen()
-    window.bgcolor("blue")
+    window.bgcolor("blue")  #Sets window color to be blue
 
     myself = turtle.Turtle()
-    myself.shape("turtle")
-    myself.color("orange")
+    myself.shape("turtle") #Sets the shape as a turtle
+    myself.color("orange") #Sets turtle color as orange
     myself.speed(1)
 
     myself.forward(100) #Moves forward a distance
