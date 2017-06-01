@@ -1,30 +1,30 @@
 import turtle
 
-def drawsquare():
+def drawsquare(aTurtle):
+    for i in range(1,5):
+        aTurtle.forward(100) #Moves forward a distance of 100.
+        aTurtle.right(90) #Moves right a distance of 90 degrees
+
+def drawart():
     window = turtle.Screen()
     window.bgcolor("blue")  #Sets window color to be blue
 
+    #Create a turtle instance
     myself = turtle.Turtle()
     myself.shape("turtle") #Sets the shape as a turtle
     myself.color("orange") #Sets turtle color as orange
     myself.speed(1)
+    drawsquare(myself)
 
-    myself.forward(100) #Moves forward a distance
-    myself.right(90)    #Moves right by 90 degrees
-    myself.forward(100)
-    myself.right(90)
-    myself.forward(100)
-    myself.right(90)
-    myself.forward(100)
-    myself.right(90)
-
-    #Instantiates a new turtle to draw a new shape after first shape
-    #drawn is done.
+    # Instantiates a new turtle to draw a new shape after first shape
+    # drawn is done.
     lima = turtle.Turtle()
     lima.shape("arrow")  # Sets new shape as a turtle
     lima.color("magenta")  # Sets new color as magenta
     lima.circle(100)
 
+
+
     window.exitonclick()
 
-drawsquare()
+drawart()
