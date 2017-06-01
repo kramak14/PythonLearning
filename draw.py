@@ -1,23 +1,21 @@
 import turtle
 
-def drawsquare():
+def drawsquare(aTurtle):
+    for i in range(1,5):
+        aTurtle.forward(100) #Moves forward a distance of 100.
+        aTurtle.right(90) #Moves right a distance of 90 degrees
+
+def drawart():
     window = turtle.Screen()
     window.bgcolor("blue")  #Sets window color to be blue
 
+    #Create a turtle instance
     myself = turtle.Turtle()
     myself.shape("turtle") #Sets the shape as a turtle
     myself.color("orange") #Sets turtle color as orange
     myself.speed(1)
-
-    myself.forward(100) #Moves forward a distance
-    myself.right(90)    #Moves right by 90 degrees
-    myself.forward(100)
-    myself.right(90)
-    myself.forward(100)
-    myself.right(90)
-    myself.forward(100)
-    myself.right(90)
+    drawsquare(myself)
 
     window.exitonclick()
 
-drawsquare()
+drawart()
