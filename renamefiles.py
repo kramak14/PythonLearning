@@ -9,6 +9,8 @@ def renamefile():
     os.chdir(r"C:\Users\krish\prank")
     #Step 3: Loop through each file, renaming the file
     for fileName in fileList:
+        print("Old file name: " + fileName)
+        print("New file name: " + fileName.translate(None,"0123456789"))
         os.rename(fileName, fileName.translate(None,"0123456789"))
         os.chdir(actualPath)
 
